@@ -5,7 +5,7 @@ const router = require('express').Router();
 router.get('/celebrities', (req, res, next) => {
   Celebrity.find()
     .then((celebritiesFromDB) => {
-      console.log('this is the celebrities route');
+      console.log('heres the celebs', celebritiesFromDB);
       res.render('celebrities/index', { celebrities: celebritiesFromDB });
     })
     .catch((err) => {

@@ -1,0 +1,28 @@
+<h2>Edit This Movie</h2>
+{{!-- {{#with movie}} --}}
+<form action='/movies/{{_id}}/edit' method='POST'>
+  <label for='name'>Title: </label>
+  <input type='text' name='title' id='title' value='{{title}}' />
+
+  <label for='name'>Genre: </label>
+  <input type='text' name='genre' id='genre' value='{{genre}}' />
+
+  <label for='name'>Plot: </label>
+  <input type='text' name='plot' id='plot' value='{{plot}}' />
+
+  <select name='cast' multiple>
+
+    {{{list}}}
+  </select>
+
+  {{! <option value="celebrity1"></option>
+<option value="celebrity1"></option>
+<option value="celebrity1"></option>
+<option value="celebrity1"></option> }}
+
+  <button type='submit'>Update this movie</button>
+</form>
+
+<a href='/movies'>Back to movies</a>
+
+{{!-- {{/with}} --}}
